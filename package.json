@@ -1,0 +1,23 @@
+{
+  "name": "damn-vulnerable-defi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "localhost": "npx hardhat run scripts/deploy.js --network localhost",
+    "goerli": "npx hardhat run scripts/deploy.js --network goerli",
+    "verify" : "npx hardhat verify --contract 'contracts/2_naive_receiver/FlashLoanReceiver.sol:FlashLoanReceiver' --network goerli 0x3F00c9206817b63484455C2C7B813E361c7cfA81 0xF6b711f16aFb3Df7B64745D467B3755e1a164788"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@openzeppelin/contracts": "^4.8.0",
+    "chai": "^4.3.7"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "hardhat": "^2.12.2"
+  }
+}
